@@ -1,0 +1,68 @@
+.edit__profile__container {
+  margin: 50px 0;
+}
+
+.edit__profile__container .profile__picture img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 7px;
+}
+
+.edit__profile__container .profile__picture button {
+  background: var(--primary-color);
+  margin-top: 15px;
+  font-weight: 500;
+  position: relative;
+}
+
+.edit__profile__container .profile__picture button:hover {
+  background: var(--primary-color);
+}
+
+.edit__profile__container .profile__picture button input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.edit__profile__container form {
+  margin-top: 30px;
+}
+
+.edit__profile__container .social__links img {
+  width: 20px;
+  opacity: 0.7;
+}
+
+.edit__profile__container .social__links input {
+  padding-left: 10px;
+}
+
+.edit__profile__container .button__group {
+  display: flex;
+  gap: 15px;
+}
+
+.edit__profile__container .button__group a {
+  flex: 1;
+}
+
+.edit__profile__container .button__group a button {
+  background: #ff4d4f !important;
+}
+
+.edit__profile__container .button__group button {
+  width: 100%;
+  flex: 1;
+  font-weight: 500;
+}
+
+.edit__profile__container .button__group button:last-child {
+  background: #52c41a;
+}

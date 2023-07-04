@@ -1,0 +1,60 @@
+nav {
+  background: var(--secondary-color);
+  position: sticky;
+  top: 0;
+  z-index: 11;
+}
+
+nav .nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+nav .left__section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+nav .left__section .logo a {
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 500;
+  padding: 7px 12px;
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 1.1rem;
+}
+
+nav .right__section {
+  display: flex;
+  gap: 15px;
+  color: var(--primary-color);
+  font-weight: 600;
+  align-items: center;
+}
+
+nav button {
+  background: #52c41a !important;
+  margin-left: 5px;
+}
+
+nav button span {
+  margin-left: 5px;
+}
+
+nav .user__info {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+  nav button {
+    display: none !important;
+  }
+}

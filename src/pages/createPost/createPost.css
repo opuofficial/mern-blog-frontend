@@ -1,0 +1,72 @@
+.jodit-status-bar-link {
+  display: none;
+}
+
+#create__post {
+}
+
+#create__post form {
+  margin-top: 35px;
+}
+
+#create__post .input__group {
+  /* border: 1px solid; */
+  /* margin-bottom: 35px; */
+}
+
+#create__post .ant-select {
+  width: 100%;
+}
+
+#create__post .publish__button {
+  background: var(--primary-color);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+#create__post .publish__button:hover {
+  background: var(--primary-color);
+}
+
+#create__post .publish__button span {
+  margin-left: 7px;
+}
+
+#create__post .dropzone {
+  border: 1px solid var(--secondary-color);
+  height: 200px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  text-align: center;
+}
+
+#create__post .plus__icon {
+  font-size: 1.7rem;
+}
+
+#create__post .dropzone div {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 1rem;
+  gap: 5px;
+}
+
+#create__post .dropzone:hover {
+  background: #e2eafc4d;
+}
+
+#create__post .dropzone.drag__active {
+  background: #e2eafc4d;
+}
+
+#create__post .preview__image img {
+  border-radius: 7px;
+  width: 150px;
+}

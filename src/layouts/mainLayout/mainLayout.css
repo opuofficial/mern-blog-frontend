@@ -1,0 +1,20 @@
+.main__container {
+  margin-top: 35px;
+  margin-right: 45px;
+  padding: 15px 0;
+}
+
+.main__container .search__box {
+  margin-bottom: 25px;
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .main__container {
+    margin-right: 0;
+  }
+
+  .main__container .search__box {
+    display: block;
+  }
+}

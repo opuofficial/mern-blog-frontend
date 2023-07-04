@@ -1,0 +1,12 @@
+.profile__info .edit__button {
+  background: var(--primary-color);
+  font-weight: 500;
+}
+
+.profile__info .edit__button:hover {
+  background: var(--primary-color);
+}
+
+.my__posts__container .heading {
+  margin: 50px 0 15px 0;
+}

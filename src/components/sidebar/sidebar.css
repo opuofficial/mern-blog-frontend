@@ -1,0 +1,31 @@
+.sidebar {
+  margin-top: 35px;
+  padding: 15px 0;
+}
+
+.sidebar h4 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.sidebar h4::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  left: 0;
+  bottom: -5px;
+  background: var(--secondary-color);
+}
+
+.sidebar > div {
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar .search__box {
+    display: none;
+  }
+}

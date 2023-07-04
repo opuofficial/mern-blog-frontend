@@ -1,0 +1,109 @@
+#view__post {
+  /* margin-top: 35px; */
+}
+
+#view__post .post__info__container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font-weight: 500;
+}
+
+#view__post .post__info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#view__post .post__info span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#view__post .post__info img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#view__post .post__info span {
+  margin: 0 5px;
+}
+
+#view__post .post__info span:first-child {
+  margin-left: 0;
+}
+
+#view__post .post__info span.topic, span.date {
+  position: relative;
+  padding-left: 15px;
+}
+
+#view__post .post__info span.topic::before, span.date::before {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: gray;
+  left: 0;
+  top: 50%;
+}
+
+#view__post .post__title {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#view__post .post__thumbnail img {
+  border-radius: 10px;
+  margin: 20px 0 30px 0;
+}
+
+#view__post .post__content {
+  font-size: 1.1rem;
+  line-height: 30px;
+  text-align: justify;
+  padding-bottom: 15px;
+}
+
+#view__post .profile__card {
+  background: var(--secondary-color);
+  padding: 30px;
+}
+
+#view__post .button__group button {
+  margin-right: 5px;
+}
+
+#view__post .button__group button:hover {
+  color: initial !important;
+}
+
+@media only screen and (max-width: 992px) {
+  #view__post .post__title {
+    font-size: 1.9rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #view__post .post__title {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #view__post .post__info__container {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  #view__post .post__info__container button {
+    margin-left: auto;
+  }
+}

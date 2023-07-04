@@ -1,0 +1,18 @@
+.newsletter input {
+  margin-top: 15px;
+}
+
+.newsletter button {
+  margin-top: 10px;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.newsletter button:hover {
+  color: initial !important;
+}
+
+.newsletter small {
+  display: block;
+  margin-top: 5px;
+}
