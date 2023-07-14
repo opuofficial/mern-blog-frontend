@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function Navbar() {
-  const { user } = useSelector((state) => state.auth);
+  const { isLoggedIn, user } = useSelector((state) => state.auth);
 
   return (
     <nav>
@@ -19,7 +19,7 @@ function Navbar() {
             </div>
           </div>
           <div className="right__section">
-            {user ? (
+            {isLoggedIn ? (
               <>
                 <Link to="/user/profile">
                   <div className="user__info">

@@ -60,6 +60,7 @@ export const authSlice = createSlice({
         state.isLoading = false;
         state.isSuccess = true;
         state.user = action.payload;
+        state.isLoggedIn = true;
       })
       .addCase(login.rejected, (state, action) => {
         state.isLoading = false;
@@ -68,7 +69,14 @@ export const authSlice = createSlice({
         state.user = null;
       })
       .addCase(logout.fulfilled, (state) => {
-        state.user = null;
+        state.user = {
+          token: "",
+          id: "",
+          username: "",
+          profilePicture: "",
+          bookmarks: "",
+        };
+        state.isLoggedIn = false;
       });
   },
 });

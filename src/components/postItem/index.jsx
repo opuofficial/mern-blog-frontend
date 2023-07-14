@@ -9,14 +9,14 @@ import { Link } from "react-router-dom";
 import useApi from "../../hooks/useApi.js";
 
 function PostItem({ post }) {
-  const { user } = useSelector((state) => state.auth);
+  const { isLoggedIn, user } = useSelector((state) => state.auth);
   const { _id, title, thumbnail, topic, author, createdAt } = post;
   const { sendRequest, data, isLoading, error } = useApi();
 
   const [bookmark, setBookmark] = useState(false);
 
   useEffect(() => {
-    if (user) {
+    if (isLoggedIn) {
       const isBookmarked = user.bookmarks.includes(_id);
       setBookmark(isBookmarked);
     }
@@ -79,7 +79,7 @@ function PostItem({ post }) {
                 </div>
               </Link>
 
-              {user && (
+              {isLoggedIn && (
                 <div className="bookmark__icon" onClick={toggleBookmark}>
                   <img
                     src={bookmark ? bookmarkSolid : bookmarkRegular}

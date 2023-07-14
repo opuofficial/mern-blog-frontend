@@ -20,7 +20,7 @@ function removeScriptTags(html) {
 
 function ViewPost() {
   const { postId } = useParams();
-  const { user } = useSelector((state) => state.auth);
+  const { isLoggedIn, user } = useSelector((state) => state.auth);
   const navigate = useNavigate();
 
   const { sendRequest, data: post, isLoading, error } = useApi();
@@ -141,10 +141,10 @@ function ViewPost() {
       <Divider />
 
       <div className="button__group">
-        <Button disabled={!user} onClick={likePost}>
+        <Button disabled={!isLoggedIn} onClick={likePost}>
           Like ({likes})
         </Button>
-        <Button disabled={!user} onClick={dislikePost}>
+        <Button disabled={!isLoggedIn} onClick={dislikePost}>
           Dislike ({disLikes})
         </Button>
       </div>
