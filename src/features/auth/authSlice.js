@@ -44,6 +44,28 @@ export const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
+    toggleBookmark: (state, action) => {
+      const bookmarkId = action.payload;
+      const { user } = state;
+      const updatedBookmarks = [...user.bookmarks];
+
+      const index = updatedBookmarks.indexOf(bookmarkId);
+      if (index !== -1) {
+        // If the bookmark ID is already in the array, remove it
+        updatedBookmarks.splice(index, 1);
+      } else {
+        // If the bookmark ID is not in the array, add it
+        updatedBookmarks.push(bookmarkId);
+      }
+
+      state.user = {
+        ...user,
+        bookmarks: updatedBookmarks,
+      };
+
+      // Update the user object in local storage
+      localStorage.setItem("user", JSON.stringify(state.user));
+    },
     reset: (state) => {
       state.isLoading = false;
       state.isSuccess = false;
@@ -81,5 +103,5 @@ export const authSlice = createSlice({
   },
 });
 
-export const { reset } = authSlice.actions;
+export const { toggleBookmark, reset } = authSlice.actions;
 export default authSlice.reducer;

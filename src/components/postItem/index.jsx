@@ -4,14 +4,16 @@ import { Col, Row } from "antd";
 import bookmarkRegular from "../../assets/bookmark-regular.svg";
 import bookmarkSolid from "../../assets/bookmark-solid.svg";
 import moment from "moment";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import useApi from "../../hooks/useApi.js";
+import { toggleBookmark as toggleBookmarkInStore } from '../../features/auth/authSlice';
 
 function PostItem({ post }) {
   const { isLoggedIn, user } = useSelector((state) => state.auth);
   const { _id, title, thumbnail, topic, author, createdAt } = post;
   const { sendRequest, data, isLoading, error } = useApi();
+  const dispatch = useDispatch();
 
   const [bookmark, setBookmark] = useState(false);
 
@@ -34,6 +36,7 @@ function PostItem({ post }) {
     const { bookmark: updateBookmark, message } = data?.data || {};
     console.log(updateBookmark);
 
+    dispatch(toggleBookmarkInStore(_id));
     setBookmark(updateBookmark);
   }, [data]);
 
