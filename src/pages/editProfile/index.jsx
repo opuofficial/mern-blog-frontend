@@ -47,7 +47,7 @@ function EditProfile() {
       const formData = new FormData();
       formData.append("profilePicture", file);
 
-      sendRequest2("PUT", "/user/edit-profile", formData);
+      sendRequest2("PUT", "/user/upload-profile-picture", formData);
     }
 
     const data = {
